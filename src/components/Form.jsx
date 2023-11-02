@@ -40,9 +40,9 @@ function Form() {
     
   return (
     <>
-        <h2 className='text-center mb-[20px] text-xl'>Schreib einen Commentar</h2>
+        <h2 className='text-center mb-[20px] text-xl'>Schreib einen Kommentar</h2>
         <div>
-            <p className='my-[20px] text-center'><FontAwesomeIcon icon={faComment} /> {counter} Commentaren </p>
+            <p className='my-[20px] text-center'><FontAwesomeIcon icon={faComment} /> {counter} Kommentaren </p>
             <ul className='flex justify-center flex-wrap gap-[10px]'>
                 {userComments.map((userComment, index) => (
                     <li key={index} className='my-[10px] border-2 rounded-[5px] p-[15px] card flex flex-col justify-center'>
@@ -65,7 +65,7 @@ function Form() {
                 <label htmlFor="name">Name*</label>
                 <input onChange={onChangeHandler} className='block border-2 rounded-[5px] p-[5px]' type="text" name="name" value={user.name} />
             </div>
-            <button onClick={onClickHandler} className='my-[30px] border-[1px] rounded-[10px] py-[10px] px-[15px]'>Commentar abschicken</button>
+            <button onClick={onClickHandler} className='my-[30px] border-[1px] rounded-[10px] py-[10px] px-[15px]'>Kommentar abschicken</button>
         </form>
     </>
     

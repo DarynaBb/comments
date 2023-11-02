@@ -22,6 +22,6 @@ button, .btn {
 }
 
 textarea, input {
-  background-color: #9bb6f5;
-  color: #060606;
+  background-color: #060606;
+  border: 3px solid #343945;
 }
