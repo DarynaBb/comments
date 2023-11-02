@@ -1,5 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faComment } from '@fortawesome/free-solid-svg-icons'
 
 function Form() {
     const [user, setUser] = useState({name: "", comment:""});
@@ -40,7 +42,7 @@ function Form() {
     <>
         <h2 className='text-center mb-[20px] text-xl'>Schreib einen Commentar</h2>
         <div>
-            <p className='my-[20px] text-center'>Anzahl: {counter}</p>
+            <p className='my-[20px] text-center'><FontAwesomeIcon icon={faComment} /> {counter} Commentaren </p>
             <ul className='flex justify-center flex-wrap gap-[10px]'>
                 {userComments.map((userComment, index) => (
                     <li key={index} className='my-[10px] border-2 rounded-[5px] p-[15px] card flex flex-col justify-center'>
