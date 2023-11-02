@@ -2,3 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #060606;
+  color: #f1f3f3;
+}
+
+button, .btn {
+  background-color: #3772ff;
+}
+
+.card {
+  border: 3px solid #343945;
+  transition: all ease-in-out 0.5s;
+}
+
+.card:hover {
+  box-shadow: 3px 3px 6px rgb(82, 74, 74);
+  cursor: pointer;
+}
+
+textarea, input {
+  background-color: #9bb6f5;
+  color: #060606;
+}
