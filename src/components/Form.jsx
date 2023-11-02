@@ -65,7 +65,18 @@ function Form() {
                 <label htmlFor="name">Name*</label>
                 <input onChange={onChangeHandler} className='block border-2 rounded-[5px] p-[5px]' type="text" name="name" value={user.name} />
             </div>
+            
+            <div>
+                <input className='mr-[5px]' type="checkbox" />
+                <label htmlFor="check">Meinen Namen, E-Mail und Website in diesem Browser speichern, bis ich wieder kommentiere</label> 
+            </div>
+            <div>
+                <input className='mr-[5px]' type="checkbox" />
+                <label htmlFor="check">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie. *</label> 
+            </div>
+
             <button onClick={onClickHandler} className='my-[30px] border-[1px] rounded-[10px] py-[10px] px-[15px]'>Kommentar abschicken</button>
+
         </form>
     </>
     
