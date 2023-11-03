@@ -76,7 +76,6 @@ function Form() {
             </div>
 
             <button onClick={onClickHandler} className='my-[30px] border-[1px] rounded-[10px] py-[10px] px-[15px]'>Kommentar abschicken</button>
-
         </form>
     </>
     
