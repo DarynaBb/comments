@@ -25,6 +25,7 @@ function Form() {
               if (response.ok) {
                 const data = await response.json();
                 setComments(data); 
+                setCounter(comments.length);
               } else {
                 console.warn("Response not okay");
               }
@@ -75,22 +76,23 @@ function Form() {
             <p className='my-[20px] text-center'><FontAwesomeIcon icon={faComment} /> {counter} Kommentaren </p>
             <ul className='flex justify-center flex-wrap gap-[10px]'>
                 {comments.map((comment) => (
-                    <li key={comment.id} className='basis-3/12 my-[10px] border-2 rounded-[5px] p-[15px] card flex flex-col justify-center w-[50%] shrink'>
+                    <li key={comment.id} className='my-[10px] border-2 rounded-[5px] p-[15px] card flex flex-col justify-center w-[50%] shrink'>
                         <div className='p-[10px]'>
-                            <p><span className='font-semibold'>Name:</span>  {comment.name}</p>
-                            <p><span className='font-semibold'>Commentar:</span> {comment.text}</p>
+                            <p className='text-[14px]'><span className='font-semibold text-[16px]'>Name:</span>  {comment.name}</p>
+                            <p className='text-[10px]'>{comment.date}</p>
+                            <p className='text-[14px] mt-[5px]'><span className='font-semibold text-[16px]'>Commentar:</span> {comment.text}</p>
                         </div>
-                        <button onClick={() => removeComment(comment.text)} className='btn border-[1px] rounded-[8px] p-[5px] cursor-pointer mt-[10px] text-sm'>Kommentar löschen</button>
+                        <button onClick={() => removeComment(comment.text)} className='btn border-[1px] rounded-[8px] p-[5px] cursor-pointer mt-[10px] text-sm self-end justify-self-end'>Kommentar löschen</button>
                     </li>
                 ))}
                 {userComments.map((userComment, index) => (
-                    <li key={index} className='basis-3/12 my-[10px] border-2 rounded-[5px] p-[15px] card flex flex-col justify-center'>
+                    <li key={index} className='basis-[50%] my-[10px] border-2 rounded-[5px] p-[15px] card flex flex-col justify-center'>
                         <div className='p-[10px]'>
-                            <p><span className='font-semibold'>Name:</span>  {userComment.name}</p>
-                            <p><span className='font-semibold'>Commentar:</span> {userComment.comment}</p>
+                            <p className='text-[14px]'><span className='font-semibold text-[16px]'>Name:</span>  {userComment.name}</p>
+                            <p className='text-[14px] mt-[5px]'><span className='font-semibold text-[16px]'>Commentar:</span> {userComment.comment}</p>
                         </div>
                         
-                        <button onClick={() => removeComment(userComment.comment)} className='btn border-[1px] rounded-[8px] p-[5px] cursor-pointer mt-[10px] text-sm'>Kommentar löschen</button>
+                        <button onClick={() => removeComment(userComment.comment)} className='btn border-[1px] rounded-[8px] p-[5px] cursor-pointer mt-[10px] text-sm self-end justify-self-end'>Kommentar löschen</button>
                     </li>
                 ))}
             </ul>
